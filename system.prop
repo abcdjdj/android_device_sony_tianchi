@@ -26,7 +26,7 @@ ro.opengles.version=196608
 #
 # System props for telephony
 # System prop to turn on CdmaLTEPhone always
-telephony.lteOnCdmaDevice=1
+telephony.lteOnCdmaDevice=0
 
 #
 #snapdragon value add features
@@ -71,5 +71,5 @@ ro.qc.sensors.step_detector=true
 ro.qc.sensors.step_counter=true
 ro.qualcomm.sensors.georv=true
 
-# Start in cdma mode
-ro.telephony.default_network=9
+# Start in gsm mode
+ro.telephony.default_network=0,1

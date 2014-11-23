@@ -99,5 +99,7 @@ $(call inherit-product-if-exists, frameworks/native/build/phone-xhdpi-1024-dalvi
 $(call inherit-product, vendor/sony/tianchi/tianchi-vendor.mk)
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.radio.multisim.config=dsds
+    persist.radio.multisim.config=dsds \
+    persist.multisim.config=dsds
+
 
