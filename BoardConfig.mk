@@ -16,7 +16,7 @@
 include device/sony/msm8226-common/BoardConfigCommon.mk
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := D5303,tianchi
+TARGET_OTA_ASSERT_DEVICE := D5322,tianchi_dsds
 
 TARGET_SPECIFIC_HEADER_PATH += device/sony/tianchi/include
 
