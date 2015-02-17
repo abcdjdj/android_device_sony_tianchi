@@ -136,7 +136,10 @@ lib/hw/camera.msm8226.so:lib/hw/camera.vendor.msm8226.so
 lib/hw/lights.default.so:lib/hw/lights.vendor.default.so
 lib/libMiscTaAccessor.so
 lib/lib_asb_tee.so
+lib/libcamera_client.so
 lib/libcamera_clientsemc.so
+lib/libcamera_metadata.so
+lib/libcameraservice.so
 lib/libcnefeatureconfig.so
 lib/libidd.so
 lib/libkeyctrl.so
