@@ -73,3 +73,13 @@ ro.qualcomm.sensors.georv=true
 
 # Start in gsm mode
 ro.telephony.default_network=0,1
+
+##### Values from product package metadata (Required by camera blobs) #####
+ro.semc.product.model=D5322
+ro.semc.ms_type_id=PM-0760-BV
+ro.semc.version.fs=GLOBAL-HSPA
+ro.semc.product.name=Xperia T2 Ultra dual
+ro.semc.product.device=D53
+ro.product.model=D5322
+ro.semc.content.number=PA4
+
