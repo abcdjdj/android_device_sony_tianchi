@@ -246,6 +246,11 @@ service cnd /system/bin/cnd
     class late_start
     socket cnd stream 660 root inet
 
+service qcom-c_main-sh /system/bin/sh /init.class_main.sh
+    class main
+    user root
+    oneshot
+
 service irsc_util /system/bin/logwrapper /system/bin/irsc_util "/etc/sec_config"
     class main
     user root
@@ -283,11 +288,16 @@ on property:bluetooth.hciattach=true
 on property:bluetooth.hciattach=false
     setprop bluetooth.status off
 
-# QMUX must be in multiple groups to support external process connections
-service qmuxd /system/bin/qmuxd
+service qmiproxy /system/bin/qmiproxy
     class main
     user radio
-    group radio audio bluetooth gps qcom_diag
+    group radio qcom_diag
+
+# QMUX must be in multiple groups to support external process connections
+service qmuxd /system/bin/qmuxd
+    class late_start
+    user radio
+    group radio audio bluetooth gps qcom_diag net_bt_stack
 
 service netmgrd /system/bin/netmgrd
     class main
@@ -515,6 +525,3 @@ on property:sys.perf.profile=2
     write /sys/devices/system/cpu/cpu2/cpufreq/scaling_governor performance
     write /sys/devices/system/cpu/cpu3/cpufreq/scaling_governor performance
     write /sys/class/kgsl/kgsl-3d0/devfreq/governor performance
-
-on persist.radio.multisim.config=dsds
-    start ril-daemon1
