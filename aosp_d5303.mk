@@ -20,6 +20,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/telephony.mk)
 $(call inherit-product, device/sony/msm8226-common/device.mk)
 $(call inherit-product, vendor/sony/tianchi/tianchi-vendor.mk)
+$(call inherit-product, vendor/sony/msm8226-common/msm8226-common-vendor.mk)
 $(call inherit-product-if-exists, frameworks/native/build/phone-xhdpi-1024-dalvik-heap.mk)
 
 DEVICE_PACKAGE_OVERLAYS += \
@@ -30,11 +31,15 @@ PRODUCT_COPY_FILES += \
     device/sony/tianchi/rootdir/system/etc/sensor_def_qcomdev.conf:system/etc/sensor_def_qcomdev.conf \
     device/sony/tianchi/rootdir/system/etc/sensor_def_somc.conf:system/etc/sensor_def_somc.conf \
     device/sony/tianchi/rootdir/system/etc/sensors_calib.conf:system/etc/sensors_calib.conf \
-    device/sony/tianchi/rootdir/system/etc/sec_config:system/etc/sec_config \
     device/sony/tianchi/rootdir/system/etc/mixer_paths.xml:system/etc/mixer_paths.xml \
     device/sony/tianchi/rootdir/system/etc/thermanager.xml:system/etc/thermanager.xml \
+    device/sony/tianchi/rootdir/system/etc/libnfc-brcm.conf:system/etc/libnfc-brcm.conf \
+    device/sony/tianchi/rootdir/system/etc/libnfc-nxp.conf:system/etc/libnfc-nxp.conf \
     device/sony/tianchi/rootdir/init.yukon.dev.rc:root/init.yukon.dev.rc \
     device/sony/tianchi/rootdir/fstab.yukon:root/fstab.yukon
+
+PRODUCT_PACKAGES += \
+    keystore.msm8226
 
 PRODUCT_NAME := aosp_d5303
 PRODUCT_DEVICE := tianchi
