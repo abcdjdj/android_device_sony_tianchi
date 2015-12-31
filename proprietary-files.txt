@@ -1,4 +1,5 @@
 bin/fm_qsoc_patches
+bin/hci_qcomm_init
 bin/sensors.qcom
 etc/firmware/adsp.b00
 etc/firmware/adsp.b01
@@ -81,7 +82,12 @@ etc/firmware/wcnss.b07
 etc/firmware/wcnss.b08
 etc/firmware/wcnss.b09
 etc/firmware/wcnss.mdt
+lib/libmdmdetect.so
+lib/libxml2.so
 vendor/firmware/libpn547_fw.so
 vendor/lib/hw/sensors.msm8226.so
 vendor/lib/libsensor1.so
 vendor/lib/libsensor_reg.so
+vendor/lib/libperipheral_client.so
+vendor/lib/libsmemlog.so
+vendor/lib/libsystem_health_mon.so
